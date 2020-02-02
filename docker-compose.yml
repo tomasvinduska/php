@@ -1,0 +1,11 @@
+version: '2'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./7.2-fpm-alpine/Dockerfile
+    volumes:
+      - "./:/var/temp"
+    environment:
+      PHP_PORT: 9191
+      PHP_MEMORY_LIMIT: 1M
